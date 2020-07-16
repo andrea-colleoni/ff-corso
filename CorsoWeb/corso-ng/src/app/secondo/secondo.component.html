@@ -1,0 +1,16 @@
+<p>I miei film preferiti</p>
+<p>
+  Aggiungi un titolo: <input [(ngModel)]="nuovoTitolo">
+  <button (click)="aggiungi()">+</button>
+</p>
+<p>
+  Aggiungi (2) un titolo: <input #nuovoTitolo2>
+  <button (click)="this.titoliFilm.push(nuovoTitolo2.value)">+</button>
+</p>
+<p>Hai selezionato: {{titoloSelezionato}}</p>
+<ul>
+  <li
+  (click)="seleziona(titolo)"
+  *ngFor="let titolo of titoliFilm"
+  [ngClass]="{ selezionato: (titolo === titoloSelezionato)  }">{{titolo}}</li>
+</ul>

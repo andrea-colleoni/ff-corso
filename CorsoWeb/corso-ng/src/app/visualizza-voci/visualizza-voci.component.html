@@ -1,0 +1,21 @@
+<table>
+  <caption>Elenco persone</caption>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of persone"
+        (click)="seleziona(p)">
+      <td>{{p.Id}}</td>
+      <td>{{p.Nome}}</td>
+      <td>{{p.Cognome}}</td>
+      <td>{{p.Email}}</td>
+    </tr>
+  </tbody>
+</table>
+<app-modifica-voce [persona]="personaSelezionata"></app-modifica-voce>

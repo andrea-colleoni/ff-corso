@@ -1,0 +1,9 @@
+<p>primo works!</p>
+<button (click)="bottoneCliccato()">Cliccami</button>
+<p> vero/falso: {{veroFalso}}</p>
+<app-secondo *ngIf="veroFalso"></app-secondo>
+<hr>
+<h2>Valori delle proprietà</h2>
+<p>Testo: {{testo}}</p>
+<p>Numero: {{numero}}</p>
+<p>Imposta il numero:<input [(ngModel)]="numero"></p>
